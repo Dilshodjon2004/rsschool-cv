@@ -55,3 +55,20 @@ console.log(romanToInt("III"));
 console.log(romanToInt("LVIII"));
 console.log(romanToInt("MCMXCIV"));
 ```
+## Education
+
+- **Bachelor, Ajou University in Tashkent**
+  - Faculty of Eelectrical and Computer Engineering
+
+## Experience
+
+- Worked as a freelancer
+- Worked as a ESL instructor at Learning Center
+- Created small pet [projects](https://github.com/Dilshodjon2004?tab=repositories)
+- Internship in [a1qa](https://www.linkedin.com/company/a1qa/)
+
+## Languages
+
+- Uzbek (native)
+- English
+- Korean
