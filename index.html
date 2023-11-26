@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./lib/prism/prism.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CV. HTML, CSS & Git Basics</title>
+  </head>
+  <body>
+    <aside>
+      <img src="./assets/photo.JPG" alt="avatar" class="avatar" />
+      <a href="https://rs.school/" target="_blank"
+        ><img src="./assets/rs_school.png" alt="Logo" class="logo"
+      /></a>
+      <div class="info-wrapper">
+        <div class="info-icon">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="info-text"><h3>Dilshodbek Gulomov</h3></div>
+      </div>
+
+      <div class="info-wrapper">
+        <div class="info-icon">
+          <i class="fa-solid fa-mobile"></i>
+        </div>
+        <div class="info-text"><h3>+998 94-414-34-75</h3></div>
+      </div>
+
+      <div class="info-wrapper">
+        <div class="info-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="info-text"><h3>dilshodjongulomov53@gmail.com</h3></div>
+      </div>
+
+      <div class="info-wrapper">
+        <div class="info-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="info-text"><h3>Tashkent, Uzbekistan</h3></div>
+      </div>
+      <ul class="contacts">
+        <li>
+          <a href="https://github.com/Dilshodjon2004" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/dilshodbek-gulomov/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/dilshodbek_gulomov/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://t.me/junior_software_engineer" target="_blank"
+            ><i class="fa-brands fa-telegram"></i
+          ></a>
+        </li>
+      </ul>
+      <p class="date">26.11.2023</p>
+    </aside>
+
+    <main>
+      <section class="user-info">
+        <h1>Dilshodbek Gulomov</h1>
+        <h2>Software Engineer</h2>
+      </section>
+      <section class="about">
+        <div class="section-header">
+          <i class="fa-solid fa-user"></i>
+          <h2>About Me</h2>
+        </div>
+        <div class="section-info">
+          <p>
+            As a frontend web developer, I’m eager to advance in the field of
+            software development. My passions include acquiring knowledge of
+            emerging technologies, undertaking diverse web projects, and more. I
+            excel in quickly grasping new concepts, resolving complex issues,
+            and effectively communicating with others.
+          </p>
+        </div>
+      </section>
+
+      <section class="education">
+        <div class="section-header">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h2>Education</h2>
+        </div>
+        <div class="section-info">
+          <p><b>Period:</b> 2021-<b>present</b></p>
+          <p><b>Faculty:</b> Electircal and Computer Engineering</p>
+          <p><b>Ajou University in Tashkent</b></p>
+        </div>
+      </section>
+
+      <section class="education">
+        <div class="section-header">
+          <i class="fa-solid fa-gears"></i>
+          <h2>Tools</h2>
+        </div>
+        <div class="section-info">
+          <ul class="tools">
+            <li>
+              <i class="fa-brands fa-html5 tool"></i>
+            </li>
+            <li>
+              <i class="fa-brands fa-css3-alt tool"></i>
+            </li>
+            <li>
+              <i class="fa-brands fa-sass tool"></i>
+            </li>
+            <li>
+              <i class="fa-brands fa-bootstrap tool"></i>
+            </li>
+            <li>
+              <i class="fa-brands fa-square-js tool"></i>
+            </li>
+            <li>
+              <i class="fa-brands fa-react tool"></i>
+            </li>
+            <li>
+              <i class="fa-brands fa-git tool"></i>
+            </li>
+            <li>
+              <i class="fa-brands fa-github tool"></i>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="code-examples">
+        <div class="section-header">
+          <i class="fa-solid fa-code"></i>
+          <h2>Code Examples</h2>
+        </div>
+        <div class="section-info">
+          <pre>
+            <code class="language-javascript">
+              // 13. Roman to Integer
+              // https://leetcode.com/problems/roman-to-integer/
+
+              function romanToInt(string) {
+                const values = new Map([["I", 1],["V", 5],["X", 10],["L", 50],["C", 100],["D", 500],["M", 1000],]);
+
+                let result = 0, current,previous = 0;
+
+                for (const char of string.split("").reverse()) {
+                  current = values.get(char);
+                  if (current >= previous) {
+                    result += current;
+                  } else {
+                    result -= current;
+                  }
+                  previous = current;
+                }
+                return result;
+              }
+              
+              console.log(romanToInt("III")); 
+              console.log(romanToInt("LVIII"));
+              console.log(romanToInt("MCMXCIV"));
+            </code>
+        </pre>
+        </div>
+      </section>
+
+      <section class="project-examples">
+        <div class="section-header">
+          <i class="fa-solid fa-diagram-project"></i>
+          <h2>Project Examples</h2>
+        </div>
+        <div class="section-info">
+          <ul>
+            <li>
+              <a href="https://dilshodjon2004.github.io/grocery_store/"
+                >E-commerce (Food Store Groco)</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://dilshodjon2004.github.io/ecommerce-nike/
+              "
+                >E-commerce website design (Nike)</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="languages">
+        <div class="section-header">
+          <i class="fa-solid fa-language"></i>
+          <h2>Languages</h2>
+        </div>
+        <div class="section-info">
+          <ul>
+            <li>
+              <p>Uzbek</p>
+              <div class="progress-bar">
+                <div class="progress" style="width: 100%"></div>
+              </div>
+            </li>
+
+            <li>
+              <p>English (Upper-intermediate)</p>
+              <div class="progress-bar">
+                <div class="progress" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li>
+              <p>Korean</p>
+              <div class="progress-bar">
+                <div class="progress" style="width: 40%"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="./lib/prism/prism.js"></script>
+  </body>
+</html>
